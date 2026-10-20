@@ -1,8 +1,6 @@
 
 import Link from "next/link";
-import BeritaCard from "@/components/BeritaCard";
-
-import berita from "@/data/berita";
+import DaftarBerita from "./DaftarBerita";
 
 export const metadata = {
   title: "Berita Sekolah | SMAN 1 Karangkobar",
@@ -14,7 +12,7 @@ export default function BeritaPage() {
   return (
     <main className="flex-1 bg-gray-50">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-800 px-5 py-16 text-white sm:px-8 sm:py-20">
+      <section className="bg-linear-to-br from-emerald-950 via-emerald-900 to-teal-800 px-5 py-16 text-white sm:px-8 sm:py-20">
         <div className="mx-auto max-w-7xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">
             Informasi Sekolah
@@ -57,23 +55,7 @@ export default function BeritaPage() {
             </p>
           </div>
 
-          {berita.length > 0 ? (
-            <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
-              {berita.map((item) => (
-                <BeritaCard key={item.id} berita={item} />
-              ))}
-            </div>
-          ) : (
-            <div className="rounded-2xl border border-gray-200 bg-white p-10 text-center">
-              <h3 className="text-lg font-bold text-gray-900">
-                Belum Ada Berita
-              </h3>
-
-              <p className="mt-2 text-gray-600">
-                Berita sekolah belum tersedia saat ini.
-              </p>
-            </div>
-          )}
+          <DaftarBerita />
         </div>
       </section>
 

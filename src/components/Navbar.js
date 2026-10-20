@@ -31,7 +31,7 @@ export default function Navbar() {
         </Link>
 
         {/* Navigasi */}
-        <div className="flex items-center gap-4 text-sm font-semibold text-gray-600 sm:gap-7">
+        <div className="flex items-center gap-3 text-sm font-semibold text-gray-600 sm:gap-7">
           <Link
             href="/"
             className="transition hover:text-emerald-700"
@@ -52,6 +52,14 @@ export default function Navbar() {
             className="transition hover:text-emerald-700"
           >
             Berita
+          </Link>
+
+          {/* Tautan Admin */}
+          <Link
+            href="/admin/login"
+            className="rounded-lg bg-emerald-900 px-3 py-2 font-bold text-white transition hover:bg-emerald-800 sm:px-4"
+          >
+            Admin
           </Link>
         </div>
       </nav>
